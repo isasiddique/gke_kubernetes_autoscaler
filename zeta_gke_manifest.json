@@ -1,0 +1,34 @@
+[
+    {
+        "kubernetesSweepIdentifier": "K8S-00001",
+        "containerNamespaceMetadata": {
+            "monitoredPodNamespace": "prod-api",
+            "activeReplicaCount": 3
+        },
+        "computeResourceUtilizationTelemetry": {
+            "measuredCPUSaturationPercent": 42.5,
+            "measuredIngressRequestRatePerSec": 1200
+        },
+        "platformOrchestrationGovernance": {
+            "autoscalingComplianceStatus": "CLUSTER_HEALTH_NOMINAL",
+            "ZetaAgentActionDirective": "RETAIN_CURRENT_POD_REPLICA_COUNT",
+            "infrastructureResponseStatusCode": 200
+        }
+    },
+    {
+        "kubernetesSweepIdentifier": "K8S-00002",
+        "containerNamespaceMetadata": {
+            "monitoredPodNamespace": "data-pipeline",
+            "activeReplicaCount": 5
+        },
+        "computeResourceUtilizationTelemetry": {
+            "measuredCPUSaturationPercent": 94.1,
+            "measuredIngressRequestRatePerSec": 12000
+        },
+        "platformOrchestrationGovernance": {
+            "autoscalingComplianceStatus": "RESOURCE_SATURATION_WARNING",
+            "ZetaAgentActionDirective": "TRIGGER_DYNAMIC_HORIZONTAL_POD_AUTOSCALING",
+            "infrastructureResponseStatusCode": 202
+        }
+    }
+]
